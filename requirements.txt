@@ -6,7 +6,7 @@ torchvision
 ultralytics
 
 # Computer Vision
-opencv-python
+opencv-python-headless  # Changed from opencv-python
 Pillow
 
 # Data Processing
