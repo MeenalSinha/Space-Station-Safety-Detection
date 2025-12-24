@@ -1,0 +1,22 @@
+# Core ML Framework
+torch
+torchvision
+
+# YOLO Object Detection
+ultralytics
+
+# Computer Vision
+opencv-python
+Pillow
+
+# Data Processing
+numpy
+pandas
+
+# Visualization & UI
+streamlit
+plotly
+
+# Utilities
+pathlib2
+pyyaml

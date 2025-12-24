@@ -1,0 +1,18 @@
+path: D:/Hackathon Dataset/Hackathon2_scripts
+
+train: train/images
+val: val/images
+test: test/images
+
+channels: 3
+
+nc: 7
+names:
+  - OxygenTank
+  - NitrogenTank
+  - FirstAidBox
+  - FireAlarm
+  - SafetySwitchPanel
+  - EmergencyPhone
+  - FireExtinguisher
+                    
