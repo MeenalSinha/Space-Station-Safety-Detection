@@ -70,39 +70,39 @@ This project automates safety compliance monitoring by detecting key safety equi
 space-station-safety-detection/
 │
 ├── app.py                      # Streamlit web application (main demo)
+├── train.py                    # Model training script
+├── predict.py                  # Batch inference script
+├── visualize.py                # Dataset visualization utility
 ├── requirements.txt            # Python dependencies
-├── packages.txt               # System dependencies for Streamlit Cloud
+├── packages.txt                # System dependencies for Streamlit Cloud
+├── classes.txt                 # Class labels list
+├── yolo_params.yaml            # Dataset & training configuration
 │
 ├── weights/
-│   └── best.pt                # Trained YOLOv8 model weights
+│   └── best.pt                 # Trained YOLOv8 model weights (best checkpoint)
 │
-├── train/                     # Training dataset
-│   ├── images/               # Training images
-│   └── labels/               # YOLO-format annotations
+├── yolov8s.pt                  # Base pretrained YOLOv8 small model
+├── yolov8m.pt                  # Alternative YOLOv8 medium backbone
+├── yolov11n.pt                 # Experimental YOLOv11 nano model
 │
-├── val/                      # Validation dataset
-│   ├── images/              # Validation images
-│   └── labels/              # YOLO-format annotations
-│
-├── test/                     # Test dataset
-│   └── images/              # Test images (unlabeled)
-│
-├── predictions/              # Inference outputs
-│   ├── images/              # Annotated images with bounding boxes
-│   └── labels/              # YOLO-format prediction files
-│
-├── runs/                     # Training artifacts
+├── runs/                       # Training artifacts & results
 │   └── detect/
-│       ├── train/           # Training logs, plots, metrics
-│       │   ├── weights/    # Model checkpoints
+│       ├── train/              # Training logs, plots, metrics
+│       │   ├── weights/        # Model checkpoints (best.pt, last.pt)
 │       │   ├── confusion_matrix.png
 │       │   ├── F1_curve.png
 │       │   ├── P_curve.png
 │       │   ├── R_curve.png
 │       │   └── results.csv
-│       └── val/            # Validation results
+│       └── val/                # Validation results
 │
-└── README.md               # This file
+├── Technical-Report.pdf        # Comprehensive project documentation
+├── LICENSE                     # MIT License
+└── README.md                   # This file
+
+Note: train/, val/, test/, and predictions/ directories are not included 
+in the repository due to size constraints. Dataset can be obtained from 
+the Duality AI Falcon platform.
 ```
 
 ---
@@ -436,8 +436,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 **Author:** Meenal Sinha  
-**Project Link:** [https://github.com/yourusername/space-station-safety-detection](https://github.com/yourusername/space-station-safety-detection)  
-**Demo App:** [https://space-station-safety.streamlit.app](https://space-station-safety.streamlit.app)
+**Project Link:** [https://github.com/yourusername/space-station-safety-detection](https://github.com/MeenalSinha/Space-Station-Safety-Detection) 
+**Demo App:** [https://space-station-safety.streamlit.app](https://space-station-safety-detection-kwdhuqhbsuvprpr8v6udyt.streamlit.app/)
 
 ---
 
@@ -447,11 +447,11 @@ If you use this project in your research or application, please cite:
 
 ```bibtex
 @software{space_station_safety_2025,
-  author = {Sinha, Meenal},
+  author = {Sinha, Meenal}, {Sinha, Aryan},
   title = {Space Station Safety Detection System},
   year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/yourusername/space-station-safety-detection}
+  url = {https://github.com/MeenalSinha/Space-Station-Safety-Detection}
 }
 ```
 
