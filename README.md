@@ -436,7 +436,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📧 Contact
 
 **Author:** Meenal Sinha  
-**Project Link:** [https://github.com/yourusername/space-station-safety-detection](https://github.com/MeenalSinha/Space-Station-Safety-Detection) 
+**Project Link:** [https://github.com/yourusername/space-station-safety-detection](https://github.com/MeenalSinha/Space-Station-Safety-Detection)  
 **Demo App:** [https://space-station-safety.streamlit.app](https://space-station-safety-detection-kwdhuqhbsuvprpr8v6udyt.streamlit.app/)
 
 ---
